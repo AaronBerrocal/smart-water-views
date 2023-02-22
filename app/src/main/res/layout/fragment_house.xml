@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/parent_screen_padding"
+    tools:context=".ui.house.HouseFragment">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_add_objects"
+        android:layout_width="@dimen/minimum_button_height"
+        android:layout_height="@dimen/minimum_button_height"
+        style="@style/SmartWater.AddButton"
+        app:iconTint="?attr/colorPrimaryVariant"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"/>
+
+    <include
+        android:id="@+id/cv_house_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/house_card_item"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_add_objects" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/div1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/horizontal_div_height"
+        android:layout_marginStart="@dimen/custom_margins_big"
+        android:layout_marginTop="@dimen/custom_margins_big"
+        android:layout_marginEnd="@dimen/custom_margins_big"
+        android:layout_marginBottom="@dimen/custom_margins_big"
+        android:background="?attr/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cv_house_info" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_parent_areas"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:paddingTop="@dimen/recyclerview_padding"
+        android:paddingBottom="@dimen/recyclerview_padding"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/div1"
+        tools:listitem="@layout/area_card_item"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

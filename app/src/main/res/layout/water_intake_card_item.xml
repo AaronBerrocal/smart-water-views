@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    style="@style/SmartWater.ShapeAppearance.App.MediumComponent"
+    android:backgroundTint="?attr/colorSecondaryContainer"
+    android:id="@+id/cv_main_container" >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:id="@+id/iv_card_water_intake_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_star_border_24"
+            app:tint="@color/yellow_star_700"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/tv_card_water_intake_name"/>
+
+        <TextView
+            android:id="@+id/tv_card_water_intake_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/iv_card_water_intake_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/tv_card_water_intake_vfr"
+            style="@style/TextAppearance.MaterialComponents.Body2"
+            android:textColor="?attr/colorPrimaryVariant"
+            android:paddingStart="@dimen/section_padding"
+            android:paddingEnd="@dimen/section_padding"
+            android:paddingTop="@dimen/section_padding"
+            android:textAlignment="center"
+            android:maxLines="1"
+            android:gravity="center"
+            android:text="Water Intake Name" />
+
+        <TextView
+            android:id="@+id/tv_card_water_intake_vfr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_card_water_intake_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:maxLines="1"
+            android:paddingStart="@dimen/section_padding"
+            android:paddingEnd="@dimen/section_padding"
+            android:paddingBottom="@dimen/section_padding"
+            style="@style/TextAppearance.MaterialComponents.Caption"
+            android:textColor="?attr/colorPrimaryVariant"
+            android:gravity="center"
+            android:padding="@dimen/section_padding"
+            android:text="0.1 lts/s" />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/create_house_opt"
+        android:title="@string/title_house" />
+
+    <item android:id="@+id/create_area_opt"
+        android:title="@string/title_area" />
+
+    <item android:id="@+id/create_water_intake_opt"
+        android:title="@string/title_water_intake" />
+
+</menu>

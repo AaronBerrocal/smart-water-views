@@ -1,0 +1,72 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.SmartWaterViews" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/blue_500</item>
+        <item name="colorPrimaryVariant">@color/blue_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/blue_500_alpha_10</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/green_200</item>
+        <item name="colorSecondaryVariant">@color/green_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="colorOnBackground">@color/black</item>
+        <item name="colorSecondaryContainer">@color/green_200_alpha_10</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" >?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="android:textSize">@dimen/text_regular_size</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.SmartWaterViews.Button.Circle" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="ShapeAppearance.SmartWaterViews.SmallComponent.OutlinedCircleButton" parent="Widget.MaterialComponents.Button.OutlinedButton.Icon">
+        <item name="android:insetLeft">@dimen/ocd_inset</item>
+        <item name="android:insetRight">@dimen/ocd_inset</item>
+        <item name="android:insetTop">@dimen/ocd_inset</item>
+        <item name="android:insetBottom">@dimen/ocd_inset</item>
+        <item name="android:padding">@dimen/ocd_padding</item>
+        <item name="strokeWidth">@dimen/ocd_stroke_width</item>
+        <item name="strokeColor">?attr/colorPrimary</item>
+    </style>
+
+    <style name="SmartWater.TextAppearance.Headline6" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="android:paddingStart">@dimen/titles_se_padding</item>
+        <item name="android:paddingEnd">@dimen/titles_se_padding</item>
+        <item name="android:paddingTop">@dimen/titles_tb_padding</item>
+        <item name="android:paddingBottom">@dimen/titles_tb_padding</item>
+    </style>
+
+    <style name="SmartWater.TextAppearance.Headline5" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="android:paddingStart">@dimen/titles_se_padding</item>
+        <item name="android:paddingEnd">@dimen/titles_se_padding</item>
+        <item name="android:paddingTop">@dimen/titles_tb_padding</item>
+        <item name="android:paddingBottom">@dimen/titles_tb_padding</item>
+    </style>
+
+    <style name="SmartWater.AddButton" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="minWidth">@dimen/minimum_button_height_plus_padding</item>
+        <item name="minHeight">@dimen/minimum_button_height_plus_padding</item>
+        <item name="icon">@drawable/ic_baseline_add_24</item>
+        <item name="iconPadding">0dp</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">12dp</item>
+        <item name="android:insetLeft">@dimen/ocd_inset</item>
+        <item name="android:insetRight">@dimen/ocd_inset</item>
+        <item name="android:insetTop">@dimen/ocd_inset</item>
+        <item name="android:insetBottom">@dimen/ocd_inset</item>
+    </style>
+
+    <style name="SmartWater.ShapeAppearance.App.MediumComponent" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSize">@dimen/section_card_corner_size</item>
+        <item name="cardElevation">@dimen/section_card_elevation</item>
+        <item name="android:layout_margin">@dimen/section_card_layout_margin</item>
+        <item name="android:padding">@dimen/section_card_padding</item>
+<!--        <item name="strokeWidth">@dimen/section_card_stroke_width</item>-->
+    </style>
+
+</resources>

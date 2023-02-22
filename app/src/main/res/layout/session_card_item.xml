@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/SmartWater.ShapeAppearance.App.MediumComponent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:strokeColor="?attr/colorSecondaryVariant">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ll_consumption_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@id/ll_duration_info"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_consumption_title"
+                style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/custom_margins_small"
+                android:padding="@dimen/custom_padding_small"
+                android:text="Consumo"
+                android:textAlignment="center" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/div1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/horizontal_div_height"
+                android:layout_marginTop="0dp"
+                android:layout_marginStart="@dimen/custom_margins_small"
+                android:layout_marginEnd="@dimen/custom_margins_small"
+                android:layout_marginBottom="@dimen/custom_margins_small"
+                android:background="?attr/colorSecondaryVariant" />
+
+            <TextView
+                android:id="@+id/tv_session_consumption_value"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/custom_margins_small"
+                android:padding="@dimen/custom_padding_small"
+                android:text="12.3 lts"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_duration_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ll_consumption_info"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_duration_title"
+                style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/custom_margins_small"
+                android:padding="@dimen/custom_padding_small"
+                android:text="Duración"
+                android:textAlignment="center" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/div2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/horizontal_div_height"
+                android:layout_marginTop="0dp"
+                android:layout_marginStart="@dimen/custom_margins_small"
+                android:layout_marginEnd="@dimen/custom_margins_small"
+                android:layout_marginBottom="@dimen/custom_margins_small"
+                android:background="?attr/colorSecondaryVariant" />
+
+            <TextView
+                android:id="@+id/tv_session_duration_value"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/custom_margins_small"
+                android:padding="@dimen/custom_padding_small"
+                android:text="3 m:12 s"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/div3"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/horizontal_div_height"
+            android:layout_marginStart="@dimen/custom_margins_big"
+            android:layout_marginTop="@dimen/custom_margins_small"
+            android:layout_marginEnd="@dimen/custom_margins_big"
+            android:layout_marginBottom="@dimen/custom_margins_small"
+            android:background="?attr/colorSecondaryVariant"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_consumption_info" />
+
+        <LinearLayout
+            android:id="@+id/ll_house_location_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/div3">
+
+            <TextView
+                android:id="@+id/tv_session_wi_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Water Intake name"
+                android:layout_weight="1"
+                android:padding="@dimen/custom_padding_small"
+                android:layout_margin="@dimen/custom_margins_small"
+                style="@style/TextAppearance.MaterialComponents.Subtitle2"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/tv_session_area_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Area Name"
+                android:layout_weight="1"
+                android:padding="@dimen/custom_padding_small"
+                android:layout_margin="@dimen/custom_margins_small"
+                style="@style/TextAppearance.MaterialComponents.Subtitle2"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_session_additional_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_house_location_info">
+
+            <TextView
+                android:id="@+id/tv_session_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hayao Miyazaki"
+                android:layout_weight="1"
+                android:padding="@dimen/custom_padding_small"
+                android:layout_margin="@dimen/custom_margins_small"
+                style="@style/TextAppearance.MaterialComponents.Subtitle2"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/tv_session_vfr_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.18 lts/s"
+                android:layout_weight="1"
+                android:padding="@dimen/custom_padding_small"
+                android:layout_margin="@dimen/custom_margins_small"
+                style="@style/TextAppearance.MaterialComponents.Subtitle2"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/div4"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/horizontal_div_height"
+            android:layout_marginStart="@dimen/custom_margins_big"
+            android:layout_marginTop="@dimen/custom_margins_small"
+            android:layout_marginEnd="@dimen/custom_margins_big"
+            android:layout_marginBottom="@dimen/custom_margins_small"
+            android:background="?attr/colorSecondaryVariant"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_session_additional_info" />
+
+        <TextView
+            android:id="@+id/tv_session_timestamp_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/custom_padding_small"
+            android:layout_marginTop="@dimen/custom_margins_small"
+            android:layout_marginBottom="@dimen/custom_margins_small"
+            android:text="31/Agosto, 17:01"
+            android:textAlignment="viewEnd"
+            android:layout_marginStart="@dimen/custom_margins_big"
+            android:layout_marginEnd="@dimen/custom_margins_big"
+            style="@style/TextAppearance.MaterialComponents.Caption"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/div4"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

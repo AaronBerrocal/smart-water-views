@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/parent_screen_padding"
+    tools:context=".ui.dialog.SaveSessionDialogFragment">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_close"
+        style="@style/SmartWater.AddButton"
+        android:layout_width="@dimen/minimum_button_height"
+        android:layout_height="@dimen/minimum_button_height"
+        app:icon="@drawable/ic_baseline_close_24"
+        app:iconTint="?attr/colorSecondaryVariant"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_save_session_action_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Uso de Toma de Agua"
+        android:maxLines="2"
+        android:textAlignment="center"
+        android:layout_marginTop="@dimen/custom_margins_big"
+        style="@style/SmartWater.TextAppearance.Headline5"
+        android:textColor="?attr/colorSecondaryVariant"
+        app:layout_constraintTop_toBottomOf="@id/btn_close"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_save_session_description_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/section_padding"
+        android:paddingEnd="@dimen/section_padding"
+        android:paddingBottom="@dimen/section_padding"
+        android:text="¿Desea guardar el registro de este uso de toma de agua?"
+        android:maxLines="2"
+        android:textAlignment="center"
+        android:textColor="?attr/colorSecondaryVariant"
+        style="@style/TextAppearance.MaterialComponents.Subtitle1"
+        app:layout_constraintTop_toBottomOf="@+id/tv_save_session_action_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/div1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/horizontal_div_height"
+        android:layout_marginStart="@dimen/custom_margins_big"
+        android:layout_marginTop="@dimen/custom_margins_big"
+        android:layout_marginEnd="@dimen/custom_margins_big"
+        android:layout_marginBottom="@dimen/custom_margins_big"
+        android:background="?attr/colorSecondaryVariant"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_save_session_description_text" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/minimum_button_height"
+        android:text="Descartar"
+        android:layout_marginTop="@dimen/custom_margins_big"
+        android:layout_marginBottom="@dimen/custom_margins_big"
+        android:layout_marginStart="@dimen/custom_margins_x_big"
+        android:layout_marginEnd="@dimen/custom_margins_x_big"
+        android:textColor="?attr/colorOnPrimary"
+        android:textAllCaps="false"
+        android:backgroundTint="?attr/colorSecondaryVariant"
+        app:layout_constraintTop_toBottomOf="@+id/div1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_save"
+        app:layout_constraintHorizontal_bias="1.0"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/minimum_button_height"
+        android:text="Guardar"
+        android:layout_margin="@dimen/custom_margins_big"
+        android:textColor="?attr/colorOnPrimary"
+        android:backgroundTint="?attr/colorSecondaryVariant"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@+id/div1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

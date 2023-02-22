@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/navigation_detect_flow">
+
+    <fragment
+        android:id="@+id/navigation_detect_flow"
+        android:name="com.bluedragoon.smartwaterviews.ui.detectflow.DetectFlowFragment"
+        android:label="@string/title_detect_flow"
+        tools:layout="@layout/fragment_detect_flow" />
+
+    <fragment
+        android:id="@+id/navigation_house"
+        android:name="com.bluedragoon.smartwaterviews.ui.house.HouseFragment"
+        android:label="@string/title_house"
+        tools:layout="@layout/fragment_house" />
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.bluedragoon.smartwaterviews.ui.dashboard.DashboardFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.bluedragoon.smartwaterviews.ui.settings.SettingsFragment"
+        android:label="@string/title_settings"
+        tools:layout="@layout/fragment_settings" />
+
+</navigation>

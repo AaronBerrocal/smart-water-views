@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/parent_screen_padding"
+    tools:context=".ui.detectflow.DetectFlowFragment">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/mbtn_start_stop_flow_detection"
+        style="@style/ShapeAppearance.SmartWaterViews.SmallComponent.OutlinedCircleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Detectar"
+        app:layout_constraintBottom_toTopOf="@+id/div1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.SmartWaterViews.Button.Circle" />
+
+    <TextView
+        android:id="@+id/tv_detection_status"
+        style="@style/TextAppearance.MaterialComponents.Caption"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/minimum_text_view_height"
+        android:gravity="center"
+        android:padding="@dimen/section_padding"
+        android:text=""
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mbtn_start_stop_flow_detection" />
+
+    <View
+        android:id="@+id/div1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/horizontal_div_height"
+        android:layout_marginStart="@dimen/custom_margins_big"
+        android:layout_marginTop="@dimen/custom_margins"
+        android:layout_marginEnd="@dimen/custom_margins_big"
+        android:layout_marginBottom="@dimen/custom_margins"
+        android:background="?attr/colorSecondary"
+        app:layout_constraintBottom_toTopOf="@+id/ll_water_intake_info"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_detection_status" />
+
+    <LinearLayout
+        android:id="@+id/ll_water_intake_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/div2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/div1">
+
+        <TextView
+            android:id="@+id/tv_water_intake_name"
+            style="@style/SmartWater.TextAppearance.Headline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Water Intake Name"
+            android:textAlignment="center"
+            android:textColor="?attr/colorSecondaryVariant" />
+
+        <TextView
+            android:id="@+id/tv_area_name"
+            style="@style/TextAppearance.MaterialComponents.Subtitle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="@dimen/text_view_padding"
+            android:text="Area Name"
+            android:textAlignment="center"
+            android:textColor="?attr/colorSecondaryVariant" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/div2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/horizontal_div_height"
+        android:layout_marginStart="@dimen/custom_margins_big"
+        android:layout_marginTop="@dimen/custom_margins"
+        android:layout_marginEnd="@dimen/custom_margins_big"
+        android:layout_marginBottom="@dimen/custom_margins"
+        android:background="?attr/colorSecondary"
+        app:layout_constraintBottom_toTopOf="@+id/ll_flow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_water_intake_info" />
+
+    <LinearLayout
+        android:id="@+id/ll_flow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/ll_time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/div2">
+
+        <TextView
+            style="@style/TextAppearance.MaterialComponents.Subtitle2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="@dimen/section_padding"
+            android:text="Flujo"
+            android:textColor="?attr/colorSecondaryVariant" />
+
+        <EditText
+            android:id="@+id/et_vfr_value"
+            style="@style/TextAppearance.MaterialComponents.Body1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/custom_margins_xx_big"
+            android:layout_marginEnd="@dimen/custom_margins_xx_big"
+            android:gravity="center"
+            android:inputType="numberDecimal" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:clipToOutline="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/ll_expenditure"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_flow">
+
+        <TextView
+            style="@style/TextAppearance.MaterialComponents.Subtitle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/section_padding"
+            android:text="Tiempo"
+            android:textColor="?attr/colorSecondaryVariant" />
+
+        <TextView
+            android:id="@+id/tv_time_value"
+            style="@style/TextAppearance.MaterialComponents.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/section_padding"
+            android:text="00 m: 00 s" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_expenditure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:clipToOutline="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/siv_anim_placeholder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_time">
+
+        <TextView
+            style="@style/TextAppearance.MaterialComponents.Subtitle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/section_padding"
+            android:text="Gasto"
+            android:textColor="?attr/colorSecondaryVariant" />
+
+        <TextView
+            android:id="@+id/tv_expenditure_value"
+            style="@style/TextAppearance.MaterialComponents.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/section_padding"
+            android:text="0.0 Litros" />
+
+    </LinearLayout>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/siv_anim_placeholder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher_round"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_expenditure" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

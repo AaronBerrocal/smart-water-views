@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/SmartWater.ShapeAppearance.App.MediumComponent"
+    app:strokeColor="?attr/colorPrimaryVariant">
+
+    <LinearLayout
+        android:id="@+id/ll_card_house_info"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="3dp"
+        android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_house_name"
+        style="@style/SmartWater.TextAppearance.Headline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="House Name"
+        android:textAlignment="center"
+        android:textColor="?attr/colorPrimaryVariant" />
+
+    <TextView
+        android:id="@+id/tv_house_admin_name"
+        style="@style/TextAppearance.MaterialComponents.Subtitle1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/section_padding"
+        android:paddingEnd="@dimen/section_padding"
+        android:paddingBottom="@dimen/section_padding"
+        android:text="House Admin Name"
+        android:textAlignment="center"
+        android:textColor="?attr/colorPrimaryVariant" />
+
+    <TextView
+        android:id="@+id/tvNoHouseFound"
+        style="@style/TextAppearance.MaterialComponents.Caption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/section_padding"
+        android:text="No se encontró Casa a la que pertenezca o administre."
+        android:textAlignment="center" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
